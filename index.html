@@ -1,7 +1,8 @@
 <script>
 	(async()=>{
+		var CORS_SERVER = 'https://api.allorigins.win/get?url=';
 		var WORLDSTATE_URL = 'https://content.warframe.com/dynamic/worldState.php';
-		var DATA = await fetch(WORLDSTATE_URL);
+		var DATA = await fetch(CORS_SERVER + WORLDSTATE_URL);
 		var JSONDATA = await DATA.json();
 		console.log( JSONDATA );
 	})();
