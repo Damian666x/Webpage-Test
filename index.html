@@ -1,1 +1,8 @@
-<div>123</div>
+<script>
+	(async()=>{
+		var WORLDSTATE_URL = 'https://content.warframe.com/dynamic/worldState.php';
+		var DATA = await fetch(WORLDSTATE_URL);
+		var JSONDATA = await DATA.json();
+		console.log( JSONDATA );
+	})();
+</script>
